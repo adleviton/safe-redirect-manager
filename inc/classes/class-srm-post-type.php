@@ -75,7 +75,7 @@ class SRM_Post_Type {
 	 */
 	public function filter_disable_quick_edit( $actions = array(), $post ) {
 		if ( 'redirect_rule' === get_post_type( $post ) && isset( $actions['inline hide-if-no-js'] ) ) {
-			unset( $actions['inline hide-if-no-js'] );
+			// unset( $actions['inline hide-if-no-js'] );
 			unset( $actions['view'] );
 		}
 
@@ -220,7 +220,7 @@ class SRM_Post_Type {
 	public function filter_bulk_actions( $actions ) {
 
 		// No bulk editing at this time
-		unset( $actions['edit'] );
+		// unset( $actions['edit'] );
 
 		return $actions;
 	}
