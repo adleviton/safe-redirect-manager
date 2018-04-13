@@ -176,10 +176,10 @@ class SRM_Post_Type {
 	 * @return array
 	 */
 	private function get_search_terms() {
-		$s = get_query_var( 's' );
+		$search_terms = get_query_var( 's' );
 
-		if ( ! empty( $s ) ) {
-			preg_match_all( '/".*?("|$)|((?<=[\\s",+])|^)[^\\s",+]+/', stripslashes( $s ), $matches );
+		if ( ! empty( $search_terms ) ) {
+			preg_match_all( '/".*?("|$)|((?<=[\\s",+])|^)[^\\s",+]+/', stripslashes( $search_terms ), $matches );
 			$search_terms = array_map( array( 'SRM_Post_Type', 'clean_search_term' ), $matches[0] );
 		}
 		return $search_terms;
@@ -657,4 +657,3 @@ class SRM_Post_Type {
 		return $instance;
 	}
 }
-
