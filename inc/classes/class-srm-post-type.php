@@ -516,7 +516,7 @@ class SRM_Post_Type {
 			'public'               => false,
 			'publicly_queryable'   => true,
 			'show_ui'              => true,
-			'show_in_menu'         => 'tools.php',
+			'show_in_menu'         => true,
 			'query_var'            => false,
 			'rewrite'              => false,
 			'capability_type'      => 'post',
